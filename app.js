@@ -1,24 +1,22 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const cors = require('cors'); // Importamos CORS
+const cors = require('cors'); 
 const path = require('path');
 const { agregarProveedor, obtenerProveedores } = require('./src/controllers/proveedorController');
 
-// Configuración del servidor
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Configuración de CORS para permitir solicitudes solo desde tu dominio en Vercel
 const corsOptions = {
-    origin: 'https://prueba-new-vercel-rouge.vercel.app', // El dominio de tu frontend
+    origin: 'https://prueba-new-vercel-rouge.vercel.app', 
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
 };
 
-app.use(cors(corsOptions)); // Habilitamos CORS para todas las rutas
+app.use(cors(corsOptions)); 
 
-// Middleware para parsear el cuerpo de las solicitudes
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
