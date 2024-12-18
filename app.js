@@ -9,7 +9,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const corsOptions = {
-    origin: 'https://prueba-new-vercel-rouge.vercel.app', 
+    origin: 'https://prueba-new-vercel.vercel.app/', 
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
 };
