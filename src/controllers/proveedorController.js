@@ -12,14 +12,14 @@ const agregarProveedor = async (req, res) => {
         const { ruc, proveedor, fecha_cosecha, fecha_envio, cantidad_kg, precio_por_kg } = req.body;
 
         // Validar que los campos requeridos no estén vacíos
-        if (!ruc || !proveedor || !fecha_cosecha || !fecha_envio || !cantidad_kg || !precio_por_kg) {
-            return res.status(400).json({ error: 'Todos los campos son obligatorios.' });
-        }
+        //if (!ruc || !proveedor || !fecha_cosecha || !fecha_envio || !cantidad_kg || !precio_por_kg) {
+            //return res.status(400).json({ error: 'Todos los campos son obligatorios.' });
+        //}
 
         // Validar que las fechas sean correctas
-        if (isNaN(new Date(fecha_cosecha)) || isNaN(new Date(fecha_envio))) {
-            return res.status(400).json({ error: 'Las fechas son inválidas.' });
-        }
+        //if (isNaN(new Date(fecha_cosecha)) || isNaN(new Date(fecha_envio))) {
+            //return res.status(400).json({ error: 'Las fechas son inválidas.' });
+        //}
 
         // Validar que los números sean positivos
         if (cantidad_kg <= 0 || precio_por_kg <= 0) {
