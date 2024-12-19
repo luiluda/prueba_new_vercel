@@ -12,13 +12,13 @@ const port = process.env.PORT || 3000;
 
 const corsOptions = {
     origin: 'https://prueba-new-vercel.vercel.app/', 
-    methods: ['GET', 'POST'],
+    methods: ['GET', 'POST','DELETE'],
     allowedHeaders: ['Content-Type'],
 };
 
 app.use(cors(corsOptions)); 
 
-//app.use(proveedorRoutes);
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -38,8 +38,21 @@ mongoose.connect(mongoUrl, {
 });
 
 // Rutas
-app.post('/api/add', agregarProveedor);
-app.get('/api/proveedores', obtenerProveedores);
+app.use('/api', proveedorRoutes);
+
+
+// Middleware para manejar rutas no encontradas
+app.use((req, res) => {
+    res.status(404).json({ error: 'Ruta no encontrada' });
+});
+
+// Middleware para manejar errores genéricos
+app.use((err, req, res, next) => {
+    console.error('Error:', err.message);
+    res.status(500).json({ error: 'Error interno del servidor' });
+});
+
+
 
 // Iniciar el servidor
 app.listen(port, () => {
