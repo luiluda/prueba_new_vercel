@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors'); 
 const path = require('path');
-const { agregarProveedor, obtenerProveedores } = require('./src/controllers/proveedorController');
+//const { agregarProveedor, obtenerProveedores } = require('./src/controllers/proveedorController');
 
 const proveedorRoutes = require('./src/models/proveedorRoutes');
 
