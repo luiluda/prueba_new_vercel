@@ -80,6 +80,14 @@
         <button type="submit">Agregar Proveedor</button>
     </form>
 
+    <h1>Eliminar Proveedor</h1>
+    <form id="form-eliminar">
+        <label for="id">ID del Proveedor</label>
+        <input type="text" id="id" name="id" required>
+
+        <button type="submit">Eliminar Proveedor</button>
+    </form>
+
     <script>
         document.getElementById('form-proveedor').addEventListener('submit', async function(event) {
             event.preventDefault(); // Evitar que el formulario recargue la página
