@@ -56,10 +56,13 @@ const agregarProveedor = async (req, res) => {
  */
 const obtenerProveedores = async (req, res) => {
     try {
-        // Obtener todos los proveedores de la base de datos
+        console.log('Intentando obtener proveedores...');
+        
+        // Obtener todos los proveedores
         const proveedores = await Proveedor.find();
 
-        // Enviar la lista de proveedores como respuesta
+        console.log('Proveedores obtenidos:', proveedores);
+
         res.status(200).json(proveedores);
     } catch (error) {
         console.error('Error al obtener proveedores:', error.message);
