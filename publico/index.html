@@ -80,13 +80,19 @@
         <button type="submit">Agregar Proveedor</button>
     </form>
 
-    <h1>Eliminar Proveedor</h1>
-    <form id="form-eliminar">
-        <label for="id">ID del Proveedor</label>
-        <input type="text" id="id" name="id" required>
+    <h1>Buscar y Eliminar Proveedor</h1>
+    <form id="form-buscar-eliminar">
+        <label for="ruc-buscar">RUC del Proveedor</label>
+        <input type="text" id="ruc-buscar" name="ruc" required>
 
-        <button type="submit">Eliminar Proveedor</button>
+        <button type="submit">Buscar Proveedor</button>
     </form>
+
+    <div id="proveedor-info" style="display: none;">
+        <h3>Proveedor encontrado:</h3>
+        <p id="info-proveedor"></p>
+        <button id="eliminar-btn">Eliminar Proveedor</button>
+    </div>
 
     <script>
         document.getElementById('form-proveedor').addEventListener('submit', async function(event) {
