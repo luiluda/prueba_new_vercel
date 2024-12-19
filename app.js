@@ -41,19 +41,19 @@ mongoose.connect(mongoUrl, {
 });
 
 // Rutas
-app.use('/api', proveedorRoutes);
+//app.use('/api', proveedorRoutes);
 
 
 // Middleware para manejar rutas no encontradas
-app.use((req, res) => {
-    res.status(404).json({ error: 'Ruta no encontrada' });
-});
+//app.use((req, res) => {
+    //res.status(404).json({ error: 'Ruta no encontrada' });
+//});
 
 // Middleware para manejar errores genéricos
-app.use((err, req, res, next) => {
-    console.error('Error:', err.message);
-    res.status(500).json({ error: 'Error interno del servidor' });
-});
+//app.use((err, req, res, next) => {
+    //console.error('Error:', err.message);
+    //res.status(500).json({ error: 'Error interno del servidor' });
+//});
 
 
 
