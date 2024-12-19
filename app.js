@@ -19,9 +19,12 @@ const corsOptions = {
 app.use(cors(corsOptions)); 
 
 
+// Middlewares
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// Rutas
+app.use('/api', proveedorRoutes);
 
 // Servir archivos estáticos de la carpeta "publico"
 app.use(express.static(path.join(__dirname, 'publico')));
