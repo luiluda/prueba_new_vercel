@@ -5,6 +5,8 @@ const cors = require('cors');
 const path = require('path');
 const { agregarProveedor, obtenerProveedores } = require('./src/controllers/proveedorController');
 
+const proveedorRoutes = require('./src/models/proveedorRoutes');
+
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -16,6 +18,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions)); 
 
+app.use(proveedorRoutes);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
