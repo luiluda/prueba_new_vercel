@@ -20,8 +20,8 @@ app.use(cors(corsOptions));
 
 
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Servir archivos estáticos de la carpeta "publico"
 app.use(express.static(path.join(__dirname, 'publico')));
