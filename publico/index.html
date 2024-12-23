@@ -8,14 +8,80 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
             padding: 0;
             background-color: #f4f4f9;
+        }
+        /* Estilo de la barra de herramientas */
+        
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        .navbar a:hover {
+            background-color: #575757;
+        }
+        
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        
+        .dropdown .dropbtn {
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin: 20px 0;
         }
         
         form {
             max-width: 500px;
-            margin: auto;
+            margin: 20px auto;
             padding: 20px;
             background: #fff;
             border-radius: 5px;
@@ -57,6 +123,23 @@
 </head>
 
 <body>
+
+        <div class="navbar">
+        <a href="#home">Inicio</a>
+        <div class="dropdown">
+            <button class="dropbtn">Opciones 
+                <i class="arrow-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#registro-proveedores">Registrar Proveedores</a>
+                <a href="#graficas">Gráficas</a>
+                <a href="#analisis">Análisis</a>
+                <a href="#registro-usuarios">Registro de Usuarios</a>
+                <a href="#rutas">Rutas</a>
+            </div>
+        </div>
+    </div>
+    
     <h1>Registrar Proveedor</h1>
     <form id="form-proveedor">
         <label for="ruc">RUC</label>
