@@ -30,8 +30,7 @@ app.use('/api', proveedorRoutes);
 app.use(express.static(path.join(__dirname, 'publico')));
 
 // Conexión a MongoDB Atlas (asegúrate de usar tu URL correcta)
-const mongoUrl = 'mongodb+srv://Prueba:QjdF3qd8w7i2P3AK@dev.sptuy.mongodb.net/ingreso_producto';
-mongoose.connect(mongoUrl, {
+const mongoUrl = 'mongodb+srv://evimu150:9AfIkrAII6LtliBt@cluster0.f0epy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => {
