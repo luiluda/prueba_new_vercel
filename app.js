@@ -30,7 +30,7 @@ app.use('/api', proveedorRoutes);
 app.use(express.static(path.join(__dirname, 'publico')));
 
 // Conexión a MongoDB Atlas (asegúrate de usar tu URL correcta)
-const mongoUrl = 'mongodb+srv://evimu150:9AfIkrAII6LtliBt@cluster0.f0epy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+const mongoUrl = 'mongodb+srv://evimu150:9AflkrAll6LtliBt@cluster0.f0epy.mongodb.net/clientes'
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => {
